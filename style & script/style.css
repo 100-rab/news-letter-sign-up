@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(235, 18%, 26%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container Styling */
+
+main {
+    /* height: 600px; */
+    max-width: 850px;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    border-radius: 20px;
+}
+
+/* hiding mobile img */
+
+.primary-img #mobile-img {
+    display: none;
+}
+
+/* Form Section styling */
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 0 2rem;
+}
+
+.form-section h1,
+.on-success h1 {
+    font-size: 2.8rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.form-section p {
+    margin-bottom: 1.5rem;
+}
+
+.form-section ul {
+    list-style: none;
+}
+
+.form-section ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.form-section ul li img {
+    margin-right: 1rem;
+}
+
+.form-section form {
+    position: relative;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.form-section form label {
+    display: block;
+    font-size: 0.7rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+
+#email {
+    margin: .5rem 0 1rem;
+    padding: 0 2rem;
+    height: 2.6rem;
+    width: inherit;
+
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 7px;
+    outline: none;
+}
+
+#email,
+#email::placeholder,
+#submit,
+#dismiss {
+    font-family:  'Roboto', sans-serif;
+}
+
+#submit,
+#dismiss {
+    height: 2.6rem;
+    width: inherit;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+
+    border: none;
+    border-radius: 7px;
+
+    margin: .2rem 0;
+
+    cursor: pointer;
+}
+
+#submit:active,
+#dismiss:active {
+    background-color: hsl(234, 31%, 12%);
+}
+
+/* Success message styling */
+
+.on-success {
+    display: none;
+
+    margin: 3rem;
+    width: 360px;
+}
+
+.on-success p {
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 690px) {
+    main {
+        flex-direction: column;
+        width: 375px;
+    }
+
+    .primary-img #desktop-img{
+        display: none;
+    }
+    
+    .primary-img #mobile-img {
+        display: block;
+    }
+
+    .primary-img {
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    /* styling */
+    .form-section,
+    .on-success {
+        margin: 0;
+    }
+
+    .on-success {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+
+/* invalid email text */
+
+#invalid-text {
+    display: none;
+    font-size: 0.7rem;
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: hsl(4, 100%, 67%);
+}
+
+.invalid-style {
+    border: 1px solid hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+    background-color: hsla(3.9, 100%, 67.1%, 0.21);
+}
+
